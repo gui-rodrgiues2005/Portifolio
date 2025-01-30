@@ -1,5 +1,11 @@
+html,
 body {
+    padding: 0%;
+    margin: 0%;
+    overflow-x: hidden;
+    width: 100%;
     font-family: "Roboto", serif;
+    box-sizing: border-box;
 }
 
 .container {
@@ -531,19 +537,6 @@ body {
 }
 
 .container {
-    @media (max-width: 768px) {
-        .header {
-            flex-direction: column;
-            align-items: center;
-
-            ul {
-                flex-direction: column;
-                /* Empilha os links */
-                gap: 10px;
-            }
-        }
-    }
-
     @media (max-width: 1024px) {
         .page2 .about {
             width: 80%;
@@ -556,11 +549,16 @@ body {
     }
 
     @media (max-width: 768px) {
-        .header ul {
+        .header {
+            width: 100%;
             flex-direction: column;
-            gap: 20px;
-        }
+            align-items: center;
 
+            ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
         .page1 {
             flex-direction: column;
             gap: 20px;
@@ -588,10 +586,202 @@ body {
             /* Duas colunas para itens */
         }
 
+        .page5 {
+            .inputs {
+                display: flex;
+                flex-direction: column;
+            
+                .areas input {
+                    width: 400px;
+                }
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .menssage textarea {
+                width: 400px;
+            }
+        }
+
         .page5 .areas input {
             width: 100%;
             /* Ajusta inputs para 100% da largura */
         }
+    }
+
+    @media (max-width: 1024px) {
+        .page1 {
+            .description {
+                h1 {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .page2 {
+            .my-image img {
+                width: 35vw;
+                margin-top: 30px;
+            }
+        }
+
+        .page3 {
+            .tecnologias {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        .page4 {
+            padding: 10px;
+
+            .works {
+                display: grid;
+                grid-template-columns: repeat(2, 3fr);
+            }
+        }
+
+        .page5 {
+            .form {
+                .inputs .areas input {
+                    width: 350px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            i {
+                position: absolute;
+                right: 10%;
+                top: 25%;
+                display: block;
+            }
+
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .navigation {
+                    display: flex;
+                    /* Mantenha o display como flex */
+                    position: absolute;
+                    right: 10%;
+                    top: 65%;
+                    width: 40vw;
+                    height: 70vh;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: -10%;
+                    background-color: #1c1c1cde;
+                    border-radius: 20px;
+                    opacity: 0;
+                    /* Inicialmente invisível */
+                    transform: translateX(100%);
+                    /* Começa fora da tela */
+                    transition: opacity 0.5s ease, transform 0.5s ease;
+                    /* Transições suaves */
+
+                    .links {
+                        position: relative;
+                        left: -20px;
+                    }
+
+                    .contact button {
+                        position: relative;
+                        left: -50px;
+                        width: 150px;
+                        height: 35px;
+
+                        a {
+                            font-size: 15px;
+                        }
+                    }
+
+                    li {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .navigation.ativo {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+
+                .navigation.hidden {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+            }
+        }
+
+        .page1 {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+
+            .description {
+                h1 {
+                    font-size: 25px;
+                }
+
+                p {
+                    width: 500px;
+                }
+
+                .work {
+                    width: 200px;
+                }
+            }
+
+            .image {
+                width: 40vw;
+            }
+        }
+
+        .page2 {
+            .my-image {
+                width: 40vw;
+            }
+        }
+
+        .page3 {
+            .tecnologias {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        .page4 {
+            .works {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .page5 {
+            .form .inputs {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
     }
 
     @media (max-width: 480px) {
@@ -631,257 +821,188 @@ body {
         }
 
     }
-}
 
+    @media (max-width: 468px) {
+        .header {
+            header .navigation {
+                width: 60vw;
 
-
-@media (max-width: 1024px) {
-    .page1 {
-        .description {
-            h1 {
-                font-size: 30px;
-            }
-
-            p {
-                font-size: 18px;
             }
         }
-    }
 
-    .page2 {
-        .my-image img {
-            width: 35vw;
-            margin-top: 30px;
-        }
-    }
-
-    .page3 {
-        .tecnologias {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-        }
-    }
-
-    .page4 {
-        padding: 10px;
-
-        .works {
-            display: grid;
-            grid-template-columns: repeat(2, 3fr);
-        }
-    }
-
-    .page5 {
-        .form {
-            .inputs .areas input {
-                width: 350px;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        i {
-            position: absolute;
-            right: 10%;
-            top: 25%;
-            display: block;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-
-            .navigation {
-                display: flex;
-                /* Mantenha o display como flex */
-                position: absolute;
-                right: 10%;
-                top: 65%;
-                width: 40vw;
-                height: 70vh;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-left: -10%;
-                background-color: #1c1c1cde;
-                border-radius: 20px;
-                opacity: 0;
-                /* Inicialmente invisível */
-                transform: translateX(100%);
-                /* Começa fora da tela */
-                transition: opacity 0.5s ease, transform 0.5s ease;
-                /* Transições suaves */
-
-                .links {
-                    position: relative;
-                    left: -20px;
-                }
-
-                .contact button {
-                    position: relative;
-                    left: -50px;
-                    width: 150px;
-                    height: 35px;
-
-                    a {
-                        font-size: 15px;
-                    }
-                }
-
-                li {
-                    margin-bottom: 20px;
+        .page1 {
+            .description {
+                p {
+                    font-size: 16px;
+                    width: 260px;
                 }
             }
 
-            .navigation.ativo {
-                opacity: 1;
-                transform: translateX(0);
-            }
-
-
-            .navigation.hidden {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-        }
-    }
-
-    .page1 {
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-
-        .description {
-            h1 {
-                font-size: 25px;
-            }
-
-            p {
-                width: 500px;
-            }
-
-            .work {
-                width: 200px;
+            .image {
+                width: 60vw;
             }
         }
 
-        .image {
-            width: 40vw;
-        }
-    }
+        .page2 {
+            .about {
+                h2 {
+                    font-size: 30px;
+                }
 
-    .page2 {
-        .my-image {
-            width: 40vw;
-        }
-    }
-
-    .page3 {
-        .tecnologias {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-        }
-    }
-
-    .page4 {
-        .works {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    .page5 {
-        .form .inputs {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-    }
-
-}
-
-@media (max-width: 468px) {
-    .page1 {
-        .description {
-            p {
-                font-size: 16px;
-                width: 260px;
+                p {
+                    width: 300px;
+                }
             }
         }
 
-        .image {
-            width: 60vw;
-        }
-    }
+        .page3 {
 
-    .page2 {
-        .about {
             h2 {
                 font-size: 30px;
             }
-        }
-    }
 
-    .page3 {
+            .tecnologias {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
 
-        h2 {
-            font-size: 30px;
-        }
+                .iten {
+                    img {
+                        width: 10vw;
+                    }
 
-        .tecnologias {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
-            .iten {
-                img {
-                    width: 10vw;
-                }
-
-                label {
-                    font-size: 14px;
+                    label {
+                        font-size: 14px;
+                    }
                 }
             }
         }
-    }
 
-    .page4 {
-        h2 {
-            font-size: 30px;
+        .page4 {
+            h2 {
+                font-size: 30px;
+            }
+
+            .works {
+                .card {
+                    width: 300px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .animated-button {
+                    width: 150px;
+                    height: 40px;
+
+                    .text {
+                        font-size: 13px;
+                    }
+                }
+            }
         }
 
-        .works {
-            .card {
+        .page5 {
+            .inputs {
+                display: flex;
+                flex-direction: column;
+            
+                .areas input {
+                    width: 300px;
+                }
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .menssage textarea {
                 width: 300px;
             }
+        }
+    }
 
-            h3 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 12px;
-            }
-
-            .animated-button {
-                width: 150px;
-                height: 40px;
-
-                .text {
-                    font-size: 13px;
+    @media (max-width: 400px) {
+        .page2 {
+            .about {
+                p {
+                    width: 270px;
                 }
+            }
+        }
+
+        .page5 {
+            .inputs {
+                display: flex;
+                flex-direction: column;
+            
+                .areas input {
+                    width: 270px;
+                }
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .menssage textarea {
+                width: 270px;
             }
         }
     }
 
-    .page {
-        .form .inputs .areas {
+    @media (max-width: 380px) {
+        .page2 {
+            .about {
+                h2 {
+                    margin-left: -10px;
+                }
 
-            width: 100px;
+                p {
+                    width: 290px;
+                    margin-left: -10px;
+                    margin-top: -20px;
+                }
+            }
+        }
+
+        .page3 {
+            h2 {
+                font-size: 25px;
+                margin-left: 20px;
+            }
+        }
+
+        .page5 {
+            .inputs {
+                display: flex;
+                flex-direction: column;
+            
+                .areas input {
+                    width: 250px;
+                }
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .menssage textarea {
+                width: 250px;
+            }
         }
     }
 }
