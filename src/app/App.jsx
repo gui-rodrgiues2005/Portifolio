@@ -17,6 +17,8 @@ import foto from '../assets/Foto.jfif';
 import ScrollReveal from 'scrollreveal';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import emailjs from '@emailjs/browser';
+import mockupZara from '../assets/mockupZara.svg';
+
 
 function App() {
   const [selecOption, setSelectOption] = useState('');
@@ -25,23 +27,23 @@ function App() {
   const handleChange = (event) => {
     setSelectOption(event.target.value);
   };
-  
+
   const verMenu = () => {
     setMenuAtivo(!menuAtivo);
   };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-  
+
     const btn = document.getElementById("button");
     btn.value = "Enviando...";
-  
+
     const serviceID = "service_1ikyq9u";
     const templateID = "template_6qzcpz1";
-    
+
     // Inicializando a chave pública corretamente
     emailjs.init("POY0D4kcYDniflPrV");
-  
+
     emailjs.sendForm(serviceID, templateID, event.target)
       .then(() => {
         btn.value = "Enviar Mensagem";
@@ -52,7 +54,7 @@ function App() {
         alert("Erro ao enviar: " + JSON.stringify(err));
       });
   };
-  
+
 
   useEffect(() => {
     ScrollReveal().reveal('.description', {
@@ -233,25 +235,55 @@ function App() {
 
         <section className='page4' id='meus-trabalhos'>
           <h2>Projetos</h2>
-          <div className='works'>
-            <div className='card'>
-              <div className='img'></div>
-              <h3>Gerador de Currículos</h3>
-              <p>Projeto desenvolvido para ajudar na criação de currículos profissionais</p>
-              <h4>Tecnologias utilizadas</h4>
-              <p>C#, React, Sass, Sql Server, Stripe</p>
-              <button className="animated-button">
-                <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                  <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                </svg>
-                <span className="text">Ver Projeto</span>
-                <span className="circle"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                  <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                </svg>
-              </button>
+          <div className='projetos'>
+            <div className='works'>
+              <div className='card'>
+                <div className='img'>EM BREVE...</div>
+                <h3>Gerador de Currículos</h3>
+                <p>Projeto desenvolvido para ajudar na criação de currículos profissionais</p>
+                <h4>Tecnologias utilizadas</h4>
+                <p>C#, React, Sass, Sql Server, Stripe</p>
+                <button className="animated-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                  </svg>
+                  <span className="text">Ver Projeto</span>
+                  <span className="circle"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                  </svg>
+                </button>
+              </div>
+              {/* Mais cards aqui */}
             </div>
-            {/* Mais cards aqui */}
+
+            <div className='works'>
+              <div className='card'>
+                <div className='img'>
+                  <img src={mockupZara}></img>
+                </div>
+                <h3>ZAIRA</h3>
+                <p>Este projeto é um portal de notícias focado no universo dos games, trazendo as últimas tendências, análises e novidades do setor. </p>
+                <h4>Tecnologias utilizadas</h4>
+                <p>React, Sass, Scrollreview, Bootstrap</p>
+                <button className="animated-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                  </svg>
+                  <span className="text">
+                    <a href="https://zaiira.netlify.app" target="_blank" rel="noopener noreferrer">
+                      Ver projeto
+                    </a>
+                  </span>
+
+                  <span className="circle"></span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+                  </svg>
+                </button>
+              </div>
+              {/* Mais cards aqui */}
+            </div>
           </div>
         </section>
 
