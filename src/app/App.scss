@@ -63,10 +63,11 @@ body {
             font-family: "Roboto", serif;
             text-decoration: none;
             transition: color 0.1s ease, transform 0.2s ease-in;
-
+            cursor: pointer;
+        
             &:hover {
                 color: #ffffffb9;
-                transform: scale(1.03);
+                transform: scale(1.05);
             }
         }
 
@@ -110,9 +111,9 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    margin-top: 120px;
+    margin-top: 220px;
     gap: 20%;
-    padding: 10px;
+    padding: 20px;
 
     .description {
         margin-left: 30px;
@@ -167,7 +168,8 @@ body {
 
 
     .image img {
-        width: 80%;
+        width: 90%;
+        margin-right: 5px;
     }
 }
 
@@ -257,10 +259,10 @@ body {
     }
 
     .works {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Sempre 3 colunas no desktop
+        gap: 20px; // Espaço entre os cards
+        padding: 20px;
     }
 
     h2 {
@@ -270,12 +272,18 @@ body {
 
     .card {
         width: 400px;
-        height: 550px;
+        height: auto;
         background: white;
         border-radius: 30px;
         box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
         transition: 0.2s ease-in-out;
         padding: 10px;
+
+        h4 {
+            margin-bottom: -10px;
+        }
+
+
     }
 
     .img {
@@ -289,9 +297,14 @@ body {
         justify-content: center;
 
         img {
-            width: 25vw;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
         }
     }
+
 
 
     .card:hover {
@@ -574,6 +587,7 @@ body {
                 gap: 10px;
             }
         }
+
         .page1 {
             flex-direction: column;
             gap: 20px;
@@ -605,7 +619,7 @@ body {
             .inputs {
                 display: flex;
                 flex-direction: column;
-            
+
                 .areas input {
                     width: 400px;
                 }
@@ -661,7 +675,11 @@ body {
 
             .works {
                 display: grid;
-                grid-template-columns: repeat(2, 3fr);
+                grid-template-columns: repeat(2, 1fr);
+
+                .card {
+                    width: 420px;
+                }
             }
         }
 
@@ -802,37 +820,119 @@ body {
     @media (max-width: 480px) {
         .header {
             flex-direction: column;
-            /* Empilha o cabeçalho */
             text-align: center;
         }
+        
+        .page1 {
+            .description {
+                h4 {
+                    margin-bottom: 10px;
+                }
+                h1 {
+                    font-size: 40px;
+                }
+                p {
+                    font-size: 20px;
+                    width: 360px;
+                }
 
-        .page3 .iten {
-            flex: 1 1 100%;
-            /* Uma coluna por linha em telas pequenas */
+                .work {
+                    width: 300px;
+                    a {
+                        font-size: 20px;
+                    }   
+                }
+            }
+
+            .image {
+                width: 85vw;
+            }
         }
 
-        .page4 .card {
-            width: 100%;
-            /* Expande os cartões para 100% da largura */
+        .page2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .my-image {
+                margin-left: -13rem;
+                img {
+                    width: 85vw;
+                }
+            }
+
+            .about {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                h2 {
+                    position: relative;
+                    font-size: 33px;
+                    top: -32rem;
+                }
+
+                p {
+                    font-size: 20px;
+                    width: 378px;
+                    margin-top: -90px;
+                }
+            }
+        }
+        
+        .page3 {
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .tecnologias {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+
+                .iten {
+                    img {
+                        width: 12vw;
+                    }
+
+                    label {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        
+        .page4 {
+            h2 {
+                font-size: 30px;
+            }
+
+            .works {
+                .card {
+                    width: 340px;
+                    height: auto;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .animated-button {
+                    width: 150px;
+                    height: 40px;
+                    margin-bottom: 20px;
+                    .text {
+                        font-size: 13px;
+                    }
+                }
+            }
         }
 
         .page5 button {
             width: 100%;
-            /* Botão ocupa a largura total */
-        }
-
-        h1,
-        h2,
-        p {
-            font-size: 90%;
-            /* Reduz os tamanhos de texto */
-        }
-
-        .page3 .tecnologias {
-            display: grid;
-            grid-template-columns: repeat(minmax(150px, 3fr));
-            /* Colunas flexíveis */
-            gap: 1rem;
         }
 
     }
@@ -847,31 +947,61 @@ body {
 
         .page1 {
             .description {
+                h4 {
+                    margin-bottom: 10px;
+                }
+                h1 {
+                    font-size: 40px;
+                }
                 p {
-                    font-size: 16px;
-                    width: 260px;
+                    font-size: 20px;
+                    width: 360px;
+                }
+
+                .work {
+                    width: 300px;
+                    a {
+                        font-size: 20px;
+                    }   
                 }
             }
 
             .image {
-                width: 60vw;
+                width: 85vw;
             }
         }
 
         .page2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .my-image {
+                margin-left: -13rem;
+                img {
+                    width: 85vw;
+                }
+            }
+
             .about {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 h2 {
-                    font-size: 30px;
+                    position: relative;
+                    font-size: 33px;
+                    top: -32rem;
                 }
 
                 p {
-                    width: 300px;
+                    font-size: 20px;
+                    width: 378px;
+                    margin-top: -90px;
                 }
             }
         }
 
         .page3 {
-
             h2 {
                 font-size: 30px;
             }
@@ -882,7 +1012,7 @@ body {
 
                 .iten {
                     img {
-                        width: 10vw;
+                        width: 12vw;
                     }
 
                     label {
@@ -900,6 +1030,7 @@ body {
             .works {
                 .card {
                     width: 300px;
+                    height: auto;
                 }
 
                 h3 {
@@ -913,7 +1044,7 @@ body {
                 .animated-button {
                     width: 150px;
                     height: 40px;
-
+                    margin-bottom: 20px;
                     .text {
                         font-size: 13px;
                     }
@@ -925,7 +1056,7 @@ body {
             .inputs {
                 display: flex;
                 flex-direction: column;
-            
+
                 .areas input {
                     width: 300px;
                 }
@@ -945,10 +1076,64 @@ body {
     }
 
     @media (max-width: 400px) {
-        .page2 {
-            .about {
+        .page1 {
+            .description {
+                h4 {
+                    margin-bottom: 10px;
+                }
+                h1 {
+                    font-size: 35px;
+                }
                 p {
-                    width: 270px;
+                    font-size: 20px;
+                    width: 320px;
+                }
+
+                .work {
+                    width: 300px;
+                    a {
+                        font-size: 20px;
+                    }   
+                }
+            }
+
+            .image {
+                width: 85vw;
+            }
+        }
+
+        .page2 {
+            .my-image img {
+                margin-left: 15px;
+            }
+            .about {
+                h2 {
+                    top: -28rem;
+                    margin-bottom: 10px;
+                }
+                p {
+                    width: 320px;
+                }
+            }
+        }
+
+        .page3 {
+            h2 {
+                font-size: 30px;
+            }
+
+            .tecnologias {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+
+                .iten {
+                    img {
+                        width: 12vw;
+                    }
+
+                    label {
+                        font-size: 11px;
+                    }
                 }
             }
         }
@@ -957,7 +1142,7 @@ body {
             .inputs {
                 display: flex;
                 flex-direction: column;
-            
+
                 .areas input {
                     width: 270px;
                 }
@@ -977,14 +1162,46 @@ body {
     }
 
     @media (max-width: 380px) {
+        .page1 {
+            .description {
+                margin: 0% auto;
+                h4 {
+                    margin-bottom: 10px;
+                }
+                h1 {
+                    font-size: 35px;
+                }
+                p {
+                    font-size: 20px;
+                    width: 320px;
+                }
+
+                .work {
+                    width: 300px;
+                    a {
+                        font-size: 20px;
+                    }   
+                }
+            }
+
+            .image {
+                width: 90vw;
+            }
+        }
+        
         .page2 {
+            .my-image img {
+                margin-bottom: -70px;
+            }
+
             .about {
                 h2 {
+                    top: -22rem;
                     margin-left: -10px;
                 }
 
                 p {
-                    width: 290px;
+                    width: 310px;
                     margin-left: -10px;
                     margin-top: -20px;
                 }
@@ -999,10 +1216,14 @@ body {
         }
 
         .page5 {
+            h1 {
+                font-size: 20px;
+            }
+
             .inputs {
                 display: flex;
                 flex-direction: column;
-            
+
                 .areas input {
                     width: 250px;
                 }
