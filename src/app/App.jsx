@@ -19,7 +19,7 @@ import ScrollReveal from 'scrollreveal';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import emailjs from '@emailjs/browser';
 import mockupZaira from '../assets/mockupZaira.svg';
-
+import logo from '../assets/GUILHERMER.COSTA_DEV.svg'
 
 function App() {
   const [selecOption, setSelectOption] = useState('');
@@ -55,7 +55,6 @@ function App() {
         alert("Erro ao enviar: " + JSON.stringify(err));
       });
   };
-
 
   useEffect(() => {
     ScrollReveal().reveal('.description', {
@@ -111,21 +110,13 @@ function App() {
     });
   }, []);
 
-  const scrollToSection = (event, sectionId) => {
-    event.preventDefault();
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setMenuAtivo(false);
-    }
-  };
-
-
   return (
     <>
       <div className='container'>
         <section className="header">
+          <div className='logo'>
+            <img src={logo}></img>
+          </div>
           {menuAtivo ? (
             <i className="bi bi-x-lg" id="closed-menu" onClick={verMenu}></i>
           ) : (
@@ -161,9 +152,14 @@ function App() {
               com foco em eficiência nos resultados.
             </p>
 
-            <button className='work'>
-              <a href="#meus-trabalhos">Conheça meu trabalho</a>
-            </button>
+            <div className='buttons-trabalho'>
+              <button className='work'>
+                <a href="#meus-trabalhos">Conheça meu trabalho</a>
+              </button>
+              <button className='work'>
+                <a href="https://odev-tech.netlify.app/" target="_blank" rel="noopener noreferrer">Trabalhe comigo</a>
+              </button>
+            </div>
           </div>
 
           <div className='image'>
