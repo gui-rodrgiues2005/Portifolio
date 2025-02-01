@@ -600,6 +600,13 @@ body {
             flex-direction: column;
             gap: 20px;
 
+            
+            .buttons-trabalho {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
             .image img {
                 width: 100%;
             }
