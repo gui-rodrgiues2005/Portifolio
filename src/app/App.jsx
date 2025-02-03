@@ -19,7 +19,8 @@ import ScrollReveal from 'scrollreveal';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import emailjs from '@emailjs/browser';
 import mockupZaira from '../assets/mockupZaira.svg';
-import logo from '../assets/GUILHERMER.COSTA_DEV.svg'
+import logo from '../assets/GUILHERMER.COSTA_DEV.svg';
+import MockupLaslesVPN from '../assets/MockupLaslesVPN.png';
 
 function App() {
   const [selecOption, setSelectOption] = useState('');
@@ -273,19 +274,18 @@ function App() {
               </div>
               <div className='card'>
                 <div className='img'>
-                  <img src={mockupZaira}></img>
+                  <img src={MockupLaslesVPN}></img>
                 </div>
-                <h3>ZAIRA</h3>
-                <p>Este projeto é um portal de notícias focado no universo dos games, trazendo as últimas tendências, análises e novidades do setor. </p>
+                <h3>LaslesVPN</h3>
+                <p>A landing page do LaslesVPN foi projetada para fornecer informações claras e concisas sobre o serviço, com um layout responsivo e amigável</p>
                 <h4>Tecnologias utilizadas</h4>
                 <p>React, Sass, Scrollreview, Bootstrap</p>
-                <p><strong>Versão mobile do site esta em desenvolvimento !</strong></p>
                 <button className="animated-button">
                   <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
                   </svg>
                   <span className="text">
-                    <a href="https://zaiira.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <a href="https://laslaesvpweb.netlify.app/" target="_blank" rel="noopener noreferrer">
                       Ver projeto
                     </a>
                   </span>
@@ -296,132 +296,6 @@ function App() {
                   </svg>
                 </button>
               </div>
-              <div className='card'>
-                <div className='img'>
-                  <img src={mockupZaira}></img>
-                </div>
-                <h3>ZAIRA</h3>
-                <p>Este projeto é um portal de notícias focado no universo dos games, trazendo as últimas tendências, análises e novidades do setor. </p>
-                <h4>Tecnologias utilizadas</h4>
-                <p>React, Sass, Scrollreview, Bootstrap</p>
-                <p><strong>Versão mobile do site esta em desenvolvimento !</strong></p>
-                <button className="animated-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                  <span className="text">
-                    <a href="https://zaiira.netlify.app" target="_blank" rel="noopener noreferrer">
-                      Ver projeto
-                    </a>
-                  </span>
-
-                  <span className="circle"></span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                </button>
-              </div>
-              <div className='card'>
-                <div className='img'>
-                  <img src={mockupZaira}></img>
-                </div>
-                <h3>ZAIRA</h3>
-                <p>Este projeto é um portal de notícias focado no universo dos games, trazendo as últimas tendências, análises e novidades do setor. </p>
-                <h4>Tecnologias utilizadas</h4>
-                <p>React, Sass, Scrollreview, Bootstrap</p>
-                <p><strong>Versão mobile do site esta em desenvolvimento !</strong></p>
-                <button className="animated-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                  <span className="text">
-                    <a href="https://zaiira.netlify.app" target="_blank" rel="noopener noreferrer">
-                      Ver projeto
-                    </a>
-                  </span>
-
-                  <span className="circle"></span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                </button>
-              </div>
-              <div className='card'>
-                <div className='img'>
-                  <img src={mockupZaira}></img>
-                </div>
-                <h3>ZAIRA</h3>
-                <p>Este projeto é um portal de notícias focado no universo dos games, trazendo as últimas tendências, análises e novidades do setor. </p>
-                <h4>Tecnologias utilizadas</h4>
-                <p>React, Sass, Scrollreview, Bootstrap</p>
-                <p><strong>Versão mobile do site esta em desenvolvimento !</strong></p>
-                <button className="animated-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                  <span className="text">
-                    <a href="https://zaiira.netlify.app" target="_blank" rel="noopener noreferrer">
-                      Ver projeto
-                    </a>
-                  </span>
-
-                  <span className="circle"></span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                </button>
-              </div>
-              <div className='card'>
-                <div className='img'>
-                  <img src={mockupZaira}></img>
-                </div>
-                <h3>ZAIRA</h3>
-                <p>Este projeto é um portal de notícias focado no universo dos games, trazendo as últimas tendências, análises e novidades do setor. </p>
-                <h4>Tecnologias utilizadas</h4>
-                <p>React, Sass, Scrollreview, Bootstrap</p>
-                <p><strong>Versão mobile do site esta em desenvolvimento !</strong></p>
-                <button className="animated-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                  <span className="text">
-                    <a href="https://zaiira.netlify.app" target="_blank" rel="noopener noreferrer">
-                      Ver projeto
-                    </a>
-                  </span>
-
-                  <span className="circle"></span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                </button>
-              </div>
-              <div className='card'>
-                <div className='img'>
-                  <img src={mockupZaira}></img>
-                </div>
-                <h3>ZAIRA</h3>
-                <p>Este projeto é um portal de notícias focado no universo dos games, trazendo as últimas tendências, análises e novidades do setor. </p>
-                <h4>Tecnologias utilizadas</h4>
-                <p>React, Sass, Scrollreview, Bootstrap</p>
-                <p><strong>Versão mobile do site esta em desenvolvimento !</strong></p>
-                <button className="animated-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                  <span className="text">
-                    <a href="https://zaiira.netlify.app" target="_blank" rel="noopener noreferrer">
-                      Ver projeto
-                    </a>
-                  </span>
-
-                  <span className="circle"></span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                  </svg>
-                </button>
-              </div>
-              {/* Mais cards aqui */}
             </div>
           </div>
         </section>
