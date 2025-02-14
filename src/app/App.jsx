@@ -154,12 +154,13 @@ function App() {
             </p>
 
             <div className='buttons-trabalho'>
-              <button className='work'>
-                <a href="#meus-trabalhos">Conheça meu trabalho</a>
-              </button>
-              <button className='work'>
-                <a href="https://odev-tech.netlify.app/" target="_blank" rel="noopener noreferrer">Trabalhe comigo</a>
-              </button>
+              <a
+                className='work' href="#meus-trabalhos">
+                  Conheça meu trabalho
+              </a>
+              <a className="work" href="https://odev-tech.netlify.app/" target="_blank" rel="noopener noreferrer">
+                Trabalhe comigo
+              </a>
             </div>
           </div>
 

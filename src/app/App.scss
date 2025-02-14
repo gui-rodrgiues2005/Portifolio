@@ -150,8 +150,11 @@ body {
         }
 
         .work {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 455px;
-            height: 50px;
+            height: 30px;
             background-color: #5E3BEE;
             color: #FFF;
             font-size: 20px;
@@ -169,6 +172,7 @@ body {
         }
 
         a {
+            text-align: center;
             text-decoration: none;
             color: #FFF;
             font-size: 16px;
